@@ -83,7 +83,7 @@ pip install rdflib
 ```linux
 git clone git@github.com:WeiDongjunGabriel/MPSUM.git
 ```
-Before running this project, please remove the MPSUM_output directory for your own output. The MPSUM_output we show is for the meeting to evaluate our output using MPSUM model.
+Before running this project, please remove the MPSUM_output directory for your own output. The MPSUM_output we provide is for the workshop mentioned above to verify adn evaluate our output.
 ### Terminal 
 if you use terminal to run our project, please follow these steps:
 ```linux
