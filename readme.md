@@ -2,6 +2,8 @@
 This project aims at generating brief but representative summaries for entities in **dbpedia** and **lmdb**.<br>
 ## CONTRIBUTORS AND BACKGROUND
 ### Contributors
+All of contributors work in Institute of Information Enginerring CAS, our names and E-mails addresses are as follows.<br>
+If you have any questions or suggestions, please do not hesitate to contact us.<br>
 - **Dongjun Wei:** weidongjun123@gmail.com<br>
 - **Shiyuan Gao:** gsyuan12@163.com<br> 
 - **Yaxin Liu:** crayou_liu@163.com<br>
@@ -10,7 +12,6 @@ This project aims at generating brief but representative summaries for entities 
 ### Background
 This is a souce code and output for **[Entity Summarization](http://ws.nju.edu.cn/summarization/esbm/)***(top5, top10, all)* in **dbpedia** and **ldmb**.<br>
 The paper of this porject is in Proceedings of 1st International Workshop on EntitY REtrieval, Lingotto, Turin, Italy, 22 October 2018 (EYRE’18), 4 pages.<br>
-If you have any questions or suggestions, please feel free to contact the contirbutors mentioned above.<br>
 ## STRUCTURE AND EXPLANATION
 ### Structure
 The directory structure of our projects should be as follows.
