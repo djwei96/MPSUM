@@ -12,7 +12,7 @@ If you have any questions or suggestions, please do not hesitate to contact us.<
 - **Yaxin Liu:** crayou_liu@163.com<br>
 - **Zhibing Liu:** liuzhbing1996@163.com<br> 
 ### Background
-This project contains souce code and output for **[Entity Summarization](http://ws.nju.edu.cn/summarization/esbm/)***(top5, top10, all)* in **[dbpedia](./dbpedia)** and **[lmdb](./lmdb)**. Compared with the results shown in [official website](http://ws.nju.edu.cn/summarization/esbm/), We have achieved state-of-the-art results.<br>
+This project contains souce code and output for **[Entity Summarization](http://ws.nju.edu.cn/summarization/esbm/)***(top5, top10, all)* in **[dbpedia](https://wiki.dbpedia.org/)** and **[lmdb](http://symas.com/lmdb)**. Compared with the results shown in [official website](http://ws.nju.edu.cn/summarization/esbm/), We have achieved state-of-the-art results.<br>
 The paper of this porject is in Proceedings of 1st International Workshop on EntitY REtrieval, Lingotto, Turin, Italy, 22 October 2018 (EYRE’18), 4 pages.<br>
 ## STRUCTURE AND EXPLANATION
 ### Structure
@@ -61,9 +61,9 @@ The directory structure of our projects should be as follows.
 ```
 ### Explanation
 - **[core](./core):** This direcotry is the main body of our project, includes:<br>
-     - **Konwledge Base preprocessor** *(rdf_preprocess_dict.py, rdf_preprocess_object.py, rdf_preprocess_predicate.py)*<br>
-     - **Category Supplementor** *(category_supplement.py)*<br>
-     - **Data for MPSUM in json fomat** *(object_corpus_list_db.json, etc)*<br>
+     - **Konwledge Base preprocessor** (*rdf_preprocess_dict.py, rdf_preprocess_object.py, rdf_preprocess_predicate.py*)<br>
+     - **Category Supplementor** (*category_supplement.py*)<br>
+     - **Data for MPSUM in json fomat** (*object_corpus_list_db.json, etc*)<br>
 - **[dbpedia](./dbpedia) and [lmdb](./lmdb):** The dataset(Knowledge Base) used in our Entiry Summarization<br>
 - **[MPSUM_output](./MPSUM_output):** The output of Entity Summarization using our MPSUM model(*Tips: You can remove this directory before running our project, and you can see this directory after the end of running our project as the output. The details about how to run our project will be dicussed below.*)<br>
 ## ENVIRONMENT AND CONFIGURATION
