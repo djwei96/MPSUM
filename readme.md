@@ -73,7 +73,7 @@ The directory structure of our projects should be as follows.
 - git
 - VSCODE 1.25(optional)
 ### Configuration
-Several python modules are needed in our project as follows:
+Several python modules are required in our project as follows:
 ```python
 pip install sklearn
 pip install lda
