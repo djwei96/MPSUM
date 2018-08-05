@@ -1,8 +1,6 @@
 # MPSUM: Predicate-Based Matching for RDF Triples with Application to LDA<br>
------
------
-This project aims at generating brief but representative summaries for entities
-## Contirbutors and background
+This project aims at generating brief but representative summaries for entities<br>
+## CONTRIBUTORS and BACKGROUND
 ### Contributors
 - [Dongjun Wei](weidongjun123@gmail.com)<br>
 - [Shiyuan Gao](gsyuan12@163.com)<br> 
@@ -13,7 +11,8 @@ This project aims at generating brief but representative summaries for entities
 This is a souce code and output for **[Entity Summarization](http://ws.nju.edu.cn/summarization/esbm/)***(top5, top10, all)* in **dbpedia** and **ldmb**.<br>
 The paper of this porject is in Proceedings of 1st International Workshop on EntitY REtrieval, Lingotto, Turin, Italy, 22 October 2018 (EYRE’18), 4 pages.<br>
 If you have any questions or suggestions, please feel free to contact the contirbutors mentioned above.<br>
-## Structure
+## STRUCTURE AND EXPLANATION
+### Structure
 The directory structure of these files should be as follows.
 ```
 |--MPSUM
@@ -57,12 +56,13 @@ The directory structure of these files should be as follows.
 			|-- 140
 		
 ```
+### Explanation
 - **core:** *This direcotry is the main body of our project, includes:*<br>
-  **Konwledge Base preprocessor** *(rdf_preprocess_dict.py, rdf_preprocess_object.py, rdf_preprocess_predicate.py)*<br>
-  **Category Supplementor** *(category_supplement.py)*<br>
-  **Data for MPSUM in json fomat** *(object_corpus_list_db.json, etc)*<br>
-  **dbpedia and lmdb:** *The dataset(Knowledge Base for our Entiry Summarization)*<br>
-  **MPSUM_output:** *The output of Entity Summarization using our MPSUM model(Tips: You can remove this directory before running our project, and you can see this directory after the end of running our project as the output. The details about how to run our project will be dicussed below.)*<br>
+     - **Konwledge Base preprocessor** *(rdf_preprocess_dict.py, rdf_preprocess_object.py, rdf_preprocess_predicate.py)*<br>
+     - **Category Supplementor** *(category_supplement.py)*<br>
+     - **Data for MPSUM in json fomat** *(object_corpus_list_db.json, etc)*<br>
+- **dbpedia and lmdb:** *The dataset(Knowledge Base) used in our Entiry Summarization*<br>
+- **MPSUM_output:** *The output of Entity Summarization using our MPSUM model(Tips: You can remove this directory before running our project, and you can see this directory after the end of running our project as the output. The details about how to run our project will be dicussed below.)*<br>
 ## Coding Environment
 
 -----
