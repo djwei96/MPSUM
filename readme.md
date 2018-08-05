@@ -68,10 +68,12 @@ The directory structure of our projects should be as follows.
 - **[MPSUM_output](./MPSUM_output):** The output of Entity Summarization using our MPSUM model(*Tips: You can remove this directory before running our project, and you can see this directory after the end of running our project as the output. The details about how to run our project will be dicussed below.*)<br>
 ## ENVIRONMENT AND CONFIGURATION
 ### Environment
+
 - Ubuntu 16.04
 - python 3.6 
 - git
 - VSCODE 1.25(optional)
+
 ### Configuration
 Several python modules are required in our project as follows:
 ```python
