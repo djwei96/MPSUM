@@ -1,5 +1,5 @@
 # MPSUM: Predicate-Based Matching for RDF Triples with Application to LDA<br>
-This project aims at generating brief but representative summaries for entities<br>
+This project aims at generating brief but representative summaries for entities in **dbpedia** and **lmdb**.<br>
 ## CONTRIBUTORS AND BACKGROUND
 ### Contributors
 - **Dongjun Wei:** weidongjun123@gmail.com<br>
@@ -13,7 +13,7 @@ The paper of this porject is in Proceedings of 1st International Workshop on Ent
 If you have any questions or suggestions, please feel free to contact the contirbutors mentioned above.<br>
 ## STRUCTURE AND EXPLANATION
 ### Structure
-The directory structure of these files should be as follows.
+The directory structure of our projects should be as follows.
 ```
 |--MPSUM
 	|--core
@@ -67,7 +67,8 @@ The directory structure of these files should be as follows.
 ### Environment
 - Ubuntu 16.04
 - python3.6 
-- vscode(optional)
+- git
+- VSCODE(optional)
 ### Configuration
 Several python modules are needed in our project as follows:
 ```python
@@ -75,14 +76,25 @@ pip install sklearn
 pip install lda
 pip install rdflib
 ```
-## 
-
------ 
-The usage of this Entity Summarization follow these steps:
-
+## USAGE
 ```linux
 git clone git@github.com:WeiDongjunGabriel/MPSUM.git
+```
+Before running this project, please remove the MPSUM_output directory for your own output. The MPSUM_output we show is for the meeting to evaluate our output using MPSUM model.
+### Terminal 
+if you use terminal to run our project, please follow these steps:
+```linux
 cd MPSUM
-cd core
+cd core 
 python lda_test_and_output.py
 ```
+### VSCODE
+if you use VSCODE as you IDE, please follow these stops:
+1. open the MPSUM folder with your VSCODE
+2. open the python file named "lda_test_output.py"
+3. run this python file in your VSCODE
+## OUTPUT AND EVALUATION
+### Output
+The output is in the folder named "MPSUM_output" as your running this project with the above steps.
+### Evaluation
+You can evaluate your own output's F-measure and MAP by following instructions in [ESBM Benchmark](http://ws.nju.edu.cn/summarization/esbm/).
