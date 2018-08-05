@@ -5,7 +5,7 @@ This project aims at generating brief but representative summaries for entities 
 All of contributors work in Institute of Information Enginerring CAS, our name and E-mail address are as follows.<br>
 If you have any questions or suggestions, please do not hesitate to contact us.<br>
 #### Tutor
-- **Longtao Huang:** huanglongtao@iie.ac.cn<br>
+- **[Longtao Huang](http://people.ucas.edu.cn/~huanglongtao):** huanglongtao@iie.ac.cn<br>
 #### Students
 - **Dongjun Wei:** weidongjun123@gmail.com<br>
 - **Shiyuan Gao:** gsyuan12@163.com<br> 
@@ -69,9 +69,9 @@ The directory structure of our projects should be as follows.
 ## ENVIRONMENT AND CONFIGURATION
 ### Environment
 - Ubuntu 16.04
-- python3.6 
+- python 3.6 
 - git
-- VSCODE(optional)
+- VSCODE 1.25(optional)
 ### Configuration
 Several python modules are needed in our project as follows:
 ```python
@@ -101,3 +101,6 @@ if you use VSCODE as you IDE, please follow these steps:
 The output is in the folder named "MPSUM_output" as your running this project with the above steps.
 ### Evaluation
 You can evaluate your own output's F-measure and MAP by following instructions in [ESBM Benchmark](http://ws.nju.edu.cn/summarization/esbm/).
+## ACKNOWLEDGEMENT
+This in our Summer internship project in IIE, my tutor [Longtao Huang](http://people.ucas.edu.cn/~huanglongtao) and group members has helped me a lot. Without them, I am certainly unable to complete this project.<br>
+What's more, a gorgeous girl passing by has given me a great incentive to go ahead.<br>  
