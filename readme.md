@@ -92,7 +92,7 @@ cd core
 python lda_test_and_output.py
 ```
 ### VSCODE
-if you use VSCODE as you IDE, please follow these steps:
+if you use VSCODE as your IDE, please follow these steps:
 1. open the MPSUM folder with your VSCODE
 2. open the python file named "lda_test_output.py"
 3. run this python file in your VSCODE
