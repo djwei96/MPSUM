@@ -12,7 +12,7 @@ If you have any questions or suggestions, please do not hesitate to contact us.<
 - **Yaxin Liu:** crayou_liu@163.com<br>
 - **Zhibing Liu:** liuzhbing1996@163.com<br> 
 ### Background
-This is project contains souce code and output for **[Entity Summarization](http://ws.nju.edu.cn/summarization/esbm/)***(top5, top10, all)* in **[dbpedia](./dbpedia)** and **[lmdb](./lmdb)**.<br>
+This is project contains souce code and output for **[Entity Summarization](http://ws.nju.edu.cn/summarization/esbm/)***(top5, top10, all)* in **[dbpedia](./dbpedia)** and **[lmdb](./lmdb)**. Compared with the results shown in official website, We have achieved state-of-the-art results<br>
 The paper of this porject is in Proceedings of 1st International Workshop on EntitY REtrieval, Lingotto, Turin, Italy, 22 October 2018 (EYRE’18), 4 pages.<br>
 ## STRUCTURE AND EXPLANATION
 ### Structure
