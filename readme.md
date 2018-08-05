@@ -79,6 +79,7 @@ Several python modules are required in our project as follows:
 ```python
 pip install sklearn
 pip install lda
+pip install SPARQLWrapper
 pip install rdflib
 ```
 ## USAGE
