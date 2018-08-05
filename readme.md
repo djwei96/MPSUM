@@ -2,15 +2,17 @@
 This project aims at generating brief but representative summaries for entities in **dbpedia** and **lmdb**.<br>
 ## CONTRIBUTORS AND BACKGROUND
 ### Contributors
-All of contributors work in Institute of Information Enginerring CAS, our names and E-mails addresses are as follows.<br>
+All of contributors work in Institute of Information Enginerring CAS, our name and E-mail address are as follows.<br>
 If you have any questions or suggestions, please do not hesitate to contact us.<br>
+#### Tutor
+- **Longtao Huang:** huanglongtao@iie.ac.cn<br>
+#### Students
 - **Dongjun Wei:** weidongjun123@gmail.com<br>
 - **Shiyuan Gao:** gsyuan12@163.com<br> 
 - **Yaxin Liu:** crayou_liu@163.com<br>
 - **Zhibing Liu:** liuzhbing1996@163.com<br> 
-- **Longtao Huang:** huanglongtao@iie.ac.cn<br>
 ### Background
-This is a souce code and output for **[Entity Summarization](http://ws.nju.edu.cn/summarization/esbm/)***(top5, top10, all)* in **dbpedia** and **ldmb**.<br>
+This is project contains souce code and output for **[Entity Summarization](http://ws.nju.edu.cn/summarization/esbm/)***(top5, top10, all)* in **[dbpedia](./dbpedia)** and **[lmdb](./lmdb)**.<br>
 The paper of this porject is in Proceedings of 1st International Workshop on EntitY REtrieval, Lingotto, Turin, Italy, 22 October 2018 (EYRE’18), 4 pages.<br>
 ## STRUCTURE AND EXPLANATION
 ### Structure
@@ -90,7 +92,7 @@ cd core
 python lda_test_and_output.py
 ```
 ### VSCODE
-if you use VSCODE as you IDE, please follow these stops:
+if you use VSCODE as you IDE, please follow these steps:
 1. open the MPSUM folder with your VSCODE
 2. open the python file named "lda_test_output.py"
 3. run this python file in your VSCODE
