@@ -1,7 +1,7 @@
 ### Entity Summarization with LDA 
 
 -----
-	Rank triples(top5, top10, all) in dbpedia and ldmb
+	Rank triples(top5, top10, all) in _dbpedia_ and *ldmb*
 
 ## Coding Environment
 
