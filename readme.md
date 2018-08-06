@@ -24,7 +24,7 @@ The directory structure of our projects should be as follows.
 		|-- rdf_preprocess_dict.py
 		|-- category_supplement.py
 		|-- ...
-		|--- lda_test_and_output.py
+		|-- lda_test_and_output.py
 	|-- dbpedia
 		|-- 1
 			|-- 1_top5.nt
@@ -41,7 +41,7 @@ The directory structure of our projects should be as follows.
 		|-- 102
 		|-- ...
 		|-- 140
-	|--MPSUM_output
+	|-- MPSUM_output
 		|-- dbpedia
 			|-- 1
 				|-- 1_top5.nt
