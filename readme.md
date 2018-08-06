@@ -5,7 +5,7 @@ This project aims at generating brief but representative summaries for entities 
 All of the contributors in this project work in the Institute of Information Enginerring CAS, our name and E-mail address are as follows.<br>
 If you have any questions or suggestions, please do not hesitate to contact us.<br>
 #### Tutor
-- **[Longtao Huang](http://people.ucas.edu.cn/~huanglongtao):** huanglongtao@iie.ac.cn<br>
+- **[Longtao Huang](http://people.ucas.edu.cn/~huanglongtao)**： huanglongtao@iie.ac.cn<br>
 #### Students
 - **Dongjun Wei:** weidongjun123@gmail.com<br>
 - **Shiyuan Gao:** gsyuan12@163.com<br> 
