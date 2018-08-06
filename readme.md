@@ -59,10 +59,10 @@ The directory structure of our projects should be as follows.
 ### Configuration
 Several python modules are required in our project as follows:
 ```python
-pip install sklearn
-pip install lda
-pip install SPARQLWrapper
-pip install rdflib
+pip3 install sklearn
+pip3 install lda
+pip3 install SPARQLWrapper
+pip3 install rdflib
 ```
 ## USAGE
 ```linux
