@@ -19,12 +19,12 @@ This brach is the full edition without pre-store data in json format acquired fr
 ### Structure
 The directory structure of our projects should be as follows.
 ```
-|--MPSUM
+|-- MPSUM
 	|--core
 		|-- rdf_preprocess_dict.py
 		|-- category_supplement.py
 		|-- ...
-		|--- lda_test_and_output.py
+		|-- lda_test_and_output.py
 	|-- dbpedia
 		|-- 1
 			|-- 1_top5.nt
