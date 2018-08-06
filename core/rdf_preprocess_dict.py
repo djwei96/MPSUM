@@ -6,18 +6,18 @@ import category_supplement
 import json
 import string
 
-#主要目录路径
-rootdir = os.path.normpath(os.path.dirname(os.path.dirname(__file__))) #根路径
-coredir = os.path.join(rootdir, 'core') #core目录路径
-dbpediadir = os.path.join(rootdir, 'dbpedia') #dbpedia目录路径
-lmdbdir = os.path.join(rootdir, 'lmdb') #lmdb目录路径
+# main path 
+rootdir = os.path.normpath(os.path.dirname(os.path.dirname(__file__))) #root path
+coredir = os.path.join(rootdir, 'core') #core path 
+dbpediadir = os.path.join(rootdir, 'dbpedia') #dbpedia path 
+lmdbdir = os.path.join(rootdir, 'lmdb') #lmdb path
 
-#dbpedia中nt文件路径列表
+#paths in dbpedia
 dbpedia_nt_path = []
 for i in range(1, 101):
     dbpedia_nt_path.append(os.path.join(dbpediadir,str(i),str(i)+'_desc.nt')) 
 
-#lmdb中nt文件路径列表
+#paths in lmdb
 lmdb_nt_path = []
 for i in range(101, 141):
     lmdb_nt_path.append(os.path.join(lmdbdir,str(i),str(i)+'_desc.nt')) 
@@ -25,13 +25,13 @@ for i in range(101, 141):
 object_corpus_list_db = []
 object_corpus_list_lm = []
 
-#提取object
+#extract object
 def object_extract(obj):
         
     obj = str(obj)
-    obj = obj.lower() #将提取object全部处理为小写
+    obj = obj.lower() 
 
-    #提取object
+   # object extractor
     if '#' in obj: 
         obj = obj[obj.find('#')+1:]  
     else: 
@@ -41,7 +41,7 @@ def object_extract(obj):
         
     return obj
 
-#紧凑object
+#object compactor
 def object_compact(obj):
 
     obj = obj.translate(str.maketrans('', '', string.punctuation))
@@ -50,7 +50,7 @@ def object_compact(obj):
     
     return obj
 
-#提取category
+#category extractor
 def add_category_from_dbpeida(subject_uri):
     predicate_uri = 'http://purl.org/dc/terms/subject'
     category_list = []
@@ -95,8 +95,6 @@ def form_object_doc_list(filepath):
         object_dictionary['processed'] = object_compact(obj)
         object_doc_list.append(object_dictionary)
 
-    #print(object_doc_list)
-
     return object_doc_list
 
 def form_and_store_object_corpus_list(kb_name='db', kb_nt_path_list=dbpedia_nt_path, base_num=0, num=100):
@@ -118,6 +116,3 @@ def constructor():
 if __name__ == '__main__': 
 
     constructor()
-    #subject_uri = 'http://www.wikidata.org/entity/Q15265344'
-    #test_list = data_supplier(subject_uri)
-    #print(test_list)

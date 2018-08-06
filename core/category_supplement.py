@@ -4,7 +4,6 @@ def extract_dbpeida_source_category_from_purl(subject_uri, predicate_uri):
 
     category_list = list()
     query_str = 'select distinct ?category where {'+'<'+subject_uri+'>'+' '+'<'+ predicate_uri+'> ?category}'
-    #print(query_str)
     sparql = SPARQLWrapper("http://dbpedia.org/sparql")
     sparql.setQuery(query_str)
     sparql.setReturnFormat(JSON)

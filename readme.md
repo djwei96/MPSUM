@@ -14,6 +14,7 @@ If you have any questions or suggestions, please do not hesitate to contact us.<
 ### Background
 This project contains souce code and output for **[Entity Summarization](http://ws.nju.edu.cn/summarization/esbm/)***(top5, top10, all)* in **[dbpedia](https://wiki.dbpedia.org/)** and **[lmdb](http://symas.com/lmdb)**. Compared with the results shown in the [official website](http://ws.nju.edu.cn/summarization/esbm/), We have achieved state-of-the-art results.<br>
 The paper of this porject is in Proceedings of 1st International Workshop on EntitY REtrieval, Lingotto, Turin, Italy, 22 October 2018 (EYRE’18), 4 pages.<br>
+This brach is the full edition without pre-store data in json format acquired from the online [database](https://wiki.dbpedia.org/).<br>
 ## STRUCTURE AND EXPLANATION
 ### Structure
 The directory structure of our projects should be as follows.
@@ -86,7 +87,7 @@ pip install rdflib
 ```linux
 git clone git@github.com:WeiDongjunGabriel/MPSUM.git
 ```
-Before running this project, please remove the [MPSUM_output](./MPSUM_output) directory for your own output. The MPSUM_output we provide is for the workshop mentioned above to verify adn evaluate our output.
+Before running this project, please remove the [MPSUM_output](./MPSUM_output) directory for your own output. The MPSUM_output we provide is for the workshop mentioned above to verify and evaluate our output.
 ### Terminal 
 if you use terminal to run our project, please follow these steps:
 ```linux
