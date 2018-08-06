@@ -19,7 +19,7 @@ The paper of this porject is in proceeding of 1st International Workshop on Enti
 ### Structure
 The directory structure of our projects should be as follows.
 ```
-|--MPSUM
+|-- MPSUM
 	|--core
 		|-- rdf_preprocess_dict.py
 		|-- category_supplement.py
