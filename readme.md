@@ -13,7 +13,8 @@ If you have any questions or suggestions, please do not hesitate to contact us.<
 - **Zhibing Liu:** liuzhbing1996@163.com<br> 
 ### Background
 This project contains souce code and output for **[Entity Summarization](http://ws.nju.edu.cn/summarization/esbm/)***(top5, top10, all)* in **[dbpedia](https://wiki.dbpedia.org/)** and **[lmdb](http://symas.com/lmdb)**. Compared with the results shown in the [official website](http://ws.nju.edu.cn/summarization/esbm/), We have achieved state-of-the-art results.<br>
-The paper of this porject is in Proceedings of 1st International Workshop on EntitY REtrieval, Lingotto, Turin, Italy, 22 October 2018 (EYRE’18), 4 pages.<br>
+The paper of this porject is in proceeding of 1st International Workshop on EntitY REtrieval, Lingotto, Turin, Italy, 22 October 2018 (EYRE’18), 4 pages.<br>
+*notice: This brach contains data we acquired from online **[database](https://wiki.dbpedia.org/)** beforehand, if you want to supplement data online on your own, please checkout our full_edition brach or read the comments in lda_output_and_test file. Due to the mobility of online database, we cannot guarantee the data you acquire is the same as we provide in this branch.*
 ## STRUCTURE AND EXPLANATION
 ### Structure
 The directory structure of our projects should be as follows.
@@ -66,7 +67,7 @@ The directory structure of our projects should be as follows.
      - **Data for MPSUM in json fomat** (*object_corpus_list_db.json, etc*)<br>
 - **[dbpedia](./dbpedia) and [lmdb](./lmdb):** The dataset(Knowledge Base) used in our Entiry Summarization<br>
 - **[MPSUM_output](./MPSUM_output):** The output of Entity Summarization using our MPSUM model(*Tips: You can remove this directory before running our project, and you can see this directory after the end of running our project as the output. The details about how to run our project will be dicussed below.*)<br>
-## ENVIRONMENT AND CONFIGURATION
+## ENVIRONMENT AND DEPENDENCY
 ### Environment
 
 - Ubuntu 16.04
@@ -74,19 +75,19 @@ The directory structure of our projects should be as follows.
 - git
 - VSCODE 1.25(optional)
 
-### Configuration
+### Dependency
 Several python modules are required in our project as follows:
 ```python
-pip install sklearn
-pip install lda
-pip install SPARQLWrapper
-pip install rdflib
+pip3 install sklearn
+pip3 install lda
+pip3 install SPARQLWrapper
+pip3 install rdflib
 ```
 ## USAGE
 ```linux
 git clone git@github.com:WeiDongjunGabriel/MPSUM.git
 ```
-Before running this project, please remove the [MPSUM_output](./MPSUM_output) directory for your own output. The MPSUM_output we provide is for the workshop mentioned above to verify adn evaluate our output.
+Before running this project, please remove the [MPSUM_output](./MPSUM_output) directory for your own output. The MPSUM_output we provide is for the workshop mentioned above to verify and evaluate our output.
 ### Terminal 
 if you use terminal to run our project, please follow these steps:
 ```linux
