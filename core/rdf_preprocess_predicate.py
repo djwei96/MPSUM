@@ -6,57 +6,56 @@ import category_supplement
 import json
 import rdf_preprocess_dict
 
-#所有predicate组成的二维list
+#predicate list in corpus
 predicate_corpus_list_db = []
 predicate_corpus_list_lm = []
 
-#所有predicate组成的集合
+#predicate set
 predicate_set_db = set()
 predicate_set_lm = set()
 
-#构建各文件中的predicate_doc_list
+#construct predicate_doc_list
 def form_predicate_doc_list(filepath):
-    #利用rdflib建立Graph并提取predicate
+    #usr rdflib to construct Graph and extract predicate
     g = rdflib.Graph()
     g.load(filepath, format='nt')
 
-    #该文件predicate组成的list
+    #predicate list in current file
     predicate_doc_list = []
 
-    #rdf预处理
+    #rdf preprocessor
     for pred in g.predicates():
         pred = predicate_preprocess(pred)
-        #处理predicate
+        #preprocess predicate
         predicate_doc_list.append(pred)
 
     return predicate_doc_list
 
 
-#构建各文件中的predicate_corpus_list
+#construct predicate_corpus_list
 def form_predicate_corpus_list(predicate_corpus_list, filepath_list, num):
     
     for i in range(num):
         predicate_corpus_list.append(form_predicate_doc_list(filepath_list[i]))
     return 
 
-#构建各KB中的predicate_set
+#construct predicate_set
 def form_and_store_predicate_set(predicate_doc_list_db, predicate_set, kb_name):
     
     for predicate_list in predicate_doc_list_db:
         for predicate in predicate_list:
             predicate_set.add(predicate)
 
-    #json格式无法保存set数据类型，故将其转换为list存储
+    #usr json format to store predicate set
     with open(os.path.join(rdf_preprocess_dict.coredir,'predicate_corpus_list_'+kb_name+'.json'), 'w+', encoding='utf-8') as f:
         json.dump(list(predicate_set), f)
-        #print(len(predicate_set))
 
 def predicate_preprocess(pred):
         
     pred = str(pred)
-    pred = pred.lower() #将提取object全部处理为小写
+    pred = pred.lower() 
 
-    #提取object
+    #object extractor
     if '#' in pred: 
         pred = pred[pred.find('#')+1:]  
     else: 
@@ -66,22 +65,22 @@ def predicate_preprocess(pred):
         
     return pred
 
-#提取单一triple中的prediate
+#extractt single triple
 def predicate_extract(triple):
 
-    #利用rdflib建立Graph并提取predicate
+    #using rdflib to construct Graph and extract predicate
     with open(os.path.join(rdf_preprocess_dict.coredir, 'predicate_extract_temp.nt'), 'w', encoding='utf-8') as extract_file:
         extract_file.write(triple)
     
     g = rdflib.Graph()
     g.load(os.path.join(rdf_preprocess_dict.coredir, 'predicate_extract_temp.nt'), format='nt')
 
-    #rdf预处理 
+    #rdf preprocesser
     for pred in g.predicates():
         pred = str(pred)
-        pred = pred.lower() #将提取predicate全部处理为小写
+        pred = pred.lower() 
    
-   #提出predicate
+   #extract predicate
     if '#' in pred: 
         pred = pred[pred.find('#')+1:]  
     else: 
@@ -116,6 +115,3 @@ def load_predicate_set(kb_name):
 if __name__ == '__main__':
 
     constructor()
-
-
-

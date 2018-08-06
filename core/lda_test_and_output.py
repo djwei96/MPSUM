@@ -3,42 +3,52 @@ import os
 import sys
 import json
 import rdf_preprocess_dict, rdf_preprocess_object, rdf_preprocess_predicate, category_supplement
-import lda_train
 
-#训练模型
+'''
+preprocess and supplement rdf triples:
+If you want to supplement data from online database, please checkout our full edition brach.
+or remove all json file and uncomment the following 3 comments.
+Due to the mobility of online database, we can't gurantee the data you supplement are the same as we provide in this branch.
+'''
+#rdf_preprocess_dict.constructor()
+#rdf_preprocess_object.constructor()
+#rdf_preprocess_predicate.constructor()
+
+#train model
+import lda_train
 rdf_preprocess_object.constructor()
 lda_train.constructor()
 
-#加载object辞典
+#load object dictionary 
 object_corpus_list_db = rdf_preprocess_object.retrieve_object_corpus_list('db')
 object_corpus_list_lm = rdf_preprocess_object.retrieve_object_corpus_list('lm')
 
-#加载corpus_word
+#load corpus_word
 corpus_word_db = lda_train.retrieve_corpus_word('db')
 corpus_word_lm = lda_train.retrieve_corpus_word('lm')
 
-#分别排序各文件triple
+#rank triples for each file
 def rank_rdf_triples(num, object_corpus_list, kb_path, corpus_word):
 
-    topic_words = corpus_word[num] #各文档主题词
-    targeted_words = [] #各nt文件中跟主题词匹配的列表
-    total_lines = [] #各nt文件中每一行的三元组构成的列表
-    matched_total_lines = [] #已经匹配到的三元组
-    predicate_list = [] #已经匹配到的predicate
+    topic_words = corpus_word[num] #topic words in current file
+    targeted_words = [] #the targeted word in current file
+    total_lines = [] #all triples in current file
+    matched_total_lines = [] #triples which are already ranked
+    predicate_list = [] #predicates which are already ranked
 
-    #匹配主题词进targeted_words
+    #match topic words into targeted_words
     for topic_word in topic_words:
         topic_word = category_supplement.match_category_with_original_object(topic_word,object_corpus_list[num])
         for object_dict in object_corpus_list[num]:
                 if topic_word == object_dict['processed']: 
                     targeted_words.append(object_dict['real']) 
 
-    #读取各nt文件中每一行进total_lines
-    with open(kb_path[num], 'r', encoding=u'utf-8') as input_file: #!修改路径列表
+    #read every triple in curerent into total_lines
+    with open(kb_path[num], 'r', encoding=u'utf-8') as input_file: 
         for input_line in input_file:
             total_lines.append(input_line[:-1])
 
-    #匹配targeted_word与total_lines
+    #match targeted_word and total_lines
     for targeted_word in targeted_words:
         for current_line in total_lines:
             current_line_lower = str(current_line).lower()
@@ -53,7 +63,7 @@ def rank_rdf_triples(num, object_corpus_list, kb_path, corpus_word):
                     matched_total_lines.append(current_line)
                     total_lines.remove(current_line)
 
-    #优先选择total_lines里不同predicate的triple
+    #MP algorithm 
     for current_line in total_lines:
         current_line_lower = str(current_line).lower()
         pred = rdf_preprocess_predicate.predicate_extract(current_line)
@@ -66,14 +76,14 @@ def rank_rdf_triples(num, object_corpus_list, kb_path, corpus_word):
             matched_total_lines.append(current_line)
             total_lines.remove(current_line)
 
-    #最后加入剩余total_lines
+
     for i in range(len(total_lines)):
         print(total_lines[i])
         matched_total_lines.append(total_lines[i])
 
     return matched_total_lines
 
-#构建es_lda_output各级目录
+#construct dirs for es_lda_output
 def make_es_lda_output_subdir(kb_name, num, base_num, tfidf_flag):
 
     path_add = ''
@@ -95,7 +105,6 @@ def make_es_lda_output_subdir(kb_name, num, base_num, tfidf_flag):
 
     return
 
-#构建并输出给定文件匹配结果
 def construct_es_lda_output(kb_name, num, base_num, matched_total_lines, tfidf_flag):
 
     num +=base_num
@@ -118,7 +127,7 @@ def construct_es_lda_output(kb_name, num, base_num, matched_total_lines, tfidf_f
         for line in matched_total_lines:
             input_file.write(line+'\n')
 
-#构建knowlege base:dbpedia, lmdb的实体摘要结果
+#construct results for knowlege base:dbpedia, lmdb
 def entity_summarization(kb, kb_name, tfidf_flag):
 
     if kb == 'dbpedia':
@@ -147,6 +156,6 @@ if __name__ == '__main__':
     entity_summarization('dbpedia', 'db', False)
     entity_summarization('lmdb', 'lm', False)
       
-    #清除缓冲区
+    #flush buffer
     if os.path.exists(os.path.join(rdf_preprocess_dict.coredir, 'predicate_extract_temp.nt')):
         os.remove(os.path.join(rdf_preprocess_dict.coredir, 'predicate_extract_temp.nt'))
