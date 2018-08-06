@@ -15,7 +15,7 @@ If you have any questions or suggestions, please do not hesitate to contact us.<
 This project contains souce code and output for **[Entity Summarization](http://ws.nju.edu.cn/summarization/esbm/)***(top5, top10, all)* in **[dbpedia](https://wiki.dbpedia.org/)** and **[lmdb](http://symas.com/lmdb)**. Compared with the results shown in the [official website](http://ws.nju.edu.cn/summarization/esbm/), We have achieved state-of-the-art results.<br>
 The paper of this porject is in Proceedings of 1st International Workshop on EntitY REtrieval, Lingotto, Turin, Italy, 22 October 2018 (EYRE’18), 4 pages.<br>
 This brach is the full edition without pre-store data in json format acquired from the online [database](https://wiki.dbpedia.org/).<br>
-## STRUCTURE AND EXPLANATION
+## STRUCTURE AND DEPENDENCY
 ### Structure
 The directory structure of our projects should be as follows.
 ```
@@ -40,33 +40,14 @@ The directory structure of our projects should be as follows.
 			|-- 101_rank.nt
 		|-- 102
 		|-- ...
-		|-- 140
-	|--MPSUM_output
-		|-- dbpedia
-			|-- 1
-				|-- 1_top5.nt
-				|-- 1_top10.nt
-				|-- 1_rank.nt
-			|-- 2
-			|-- ...
-			|-- 100
-  		|-- lmdb
-			|-- 101
-				|-- 101_top5.nt
-				|-- 101_top10.nt
-				|-- 101_rank.nt
-			|-- 102
-			|-- ...
-			|-- 140
-		
+		|-- 140		
 ```
-### Explanation
+### Dependency
 - **[core](./core):** This direcotry is the main body of our project, includes:<br>
      - **Konwledge Base preprocessor** (*rdf_preprocess_dict.py, rdf_preprocess_object.py, rdf_preprocess_predicate.py*)<br>
      - **Category Supplementor** (*category_supplement.py*)<br>
      - **Data for MPSUM in json fomat** (*object_corpus_list_db.json, etc*)<br>
 - **[dbpedia](./dbpedia) and [lmdb](./lmdb):** The dataset(Knowledge Base) used in our Entiry Summarization<br>
-- **[MPSUM_output](./MPSUM_output):** The output of Entity Summarization using our MPSUM model(*Tips: You can remove this directory before running our project, and you can see this directory after the end of running our project as the output. The details about how to run our project will be dicussed below.*)<br>
 ## ENVIRONMENT AND CONFIGURATION
 ### Environment
 
