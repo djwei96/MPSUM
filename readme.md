@@ -67,7 +67,7 @@ The directory structure of our projects should be as follows.
      - **Data for MPSUM in json fomat** (*object_corpus_list_db.json, etc*)<br>
 - **[dbpedia](./dbpedia) and [lmdb](./lmdb):** The dataset(Knowledge Base) used in our Entiry Summarization<br>
 - **[MPSUM_output](./MPSUM_output):** The output of Entity Summarization using our MPSUM model(*Tips: You can remove this directory before running our project, and you can see this directory after the end of running our project as the output. The details about how to run our project will be dicussed below.*)<br>
-## ENVIRONMENT AND CONFIGURATION
+## ENVIRONMENT AND DEPENDENCY
 ### Environment
 
 - Ubuntu 16.04
@@ -75,13 +75,13 @@ The directory structure of our projects should be as follows.
 - git
 - VSCODE 1.25(optional)
 
-### Configuration
+### Dependency
 Several python modules are required in our project as follows:
 ```python
-pip install sklearn
-pip install lda
-pip install SPARQLWrapper
-pip install rdflib
+pip3 install sklearn
+pip3 install lda
+pip3 install SPARQLWrapper
+pip3 install rdflib
 ```
 ## USAGE
 ```linux
