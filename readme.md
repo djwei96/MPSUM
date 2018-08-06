@@ -15,7 +15,7 @@ If you have any questions or suggestions, please do not hesitate to contact us.<
 This project contains souce code and output for **[Entity Summarization](http://ws.nju.edu.cn/summarization/esbm/)***(top5, top10, all)* in **[dbpedia](https://wiki.dbpedia.org/)** and **[lmdb](http://symas.com/lmdb)**. Compared with the results shown in the [official website](http://ws.nju.edu.cn/summarization/esbm/), We have achieved state-of-the-art results.<br>
 The paper of this porject is in Proceedings of 1st International Workshop on EntitY REtrieval, Lingotto, Turin, Italy, 22 October 2018 (EYRE’18), 4 pages.<br>
 This brach is the full edition without pre-store data in json format acquired from the online [database](https://wiki.dbpedia.org/).<br>
-## STRUCTURE AND DEPENDENCY
+## STRUCTURE AND EXPLANATOIN
 ### Structure
 The directory structure of our projects should be as follows.
 ```
@@ -42,13 +42,13 @@ The directory structure of our projects should be as follows.
 		|-- ...
 		|-- 140		
 ```
-### Dependency
+### Explanation
 - **[core](./core):** This direcotry is the main body of our project, includes:<br>
      - **Konwledge Base preprocessor** (*rdf_preprocess_dict.py, rdf_preprocess_object.py, rdf_preprocess_predicate.py*)<br>
      - **Category Supplementor** (*category_supplement.py*)<br>
      - **Data for MPSUM in json fomat** (*object_corpus_list_db.json, etc*)<br>
 - **[dbpedia](./dbpedia) and [lmdb](./lmdb):** The dataset(Knowledge Base) used in our Entiry Summarization<br>
-## ENVIRONMENT AND CONFIGURATION
+## ENVIRONMENT AND DEPENDENCY
 ### Environment
 
 - Ubuntu 16.04
@@ -56,7 +56,7 @@ The directory structure of our projects should be as follows.
 - git
 - VSCODE 1.25(optional)
 
-### Configuration
+### Dendency
 Several python modules are required in our project as follows:
 ```python
 pip3 install sklearn
