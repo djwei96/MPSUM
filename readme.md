@@ -87,11 +87,11 @@ pip3 install rdflib
 ```linux
 git clone git@github.com:WeiDongjunGabriel/MPSUM.git
 ```
-Before running this project, please remove the [MPSUM_output](./MPSUM_output) directory for your own output. The MPSUM_output we provide is for the workshop mentioned above to verify and evaluate our output.
+Before running this project, please remove the **[MPSUM_output](./MPSUM_output)** directory for your own output. The MPSUM_output we provide is for the workshop mentioned above to verify and evaluate our output.
 ### Terminal 
 if you use terminal to run our project, please follow these steps:
 ```linux
-cd MPSUM
+cd .../MPSUM
 cd core 
 python lda_test_and_output.py
 ```
