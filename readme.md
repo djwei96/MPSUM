@@ -13,7 +13,7 @@ If you have any questions or suggestions, please do not hesitate to contact us.<
 - **Zhibing Liu:** liuzhbing1996@163.com<br> 
 ### Background
 This project contains souce code and output for **[Entity Summarization](http://ws.nju.edu.cn/summarization/esbm/)***(top5, top10, all)* in **[dbpedia](https://wiki.dbpedia.org/)** and **[lmdb](http://symas.com/lmdb)**. Compared with the results shown in the **[official website](http://ws.nju.edu.cn/summarization/esbm/)**, We have achieved state-of-the-art results.<br>
-The paper of this porject is in proceeding of 1st International Workshop on EntitY REtrieval, Lingotto, Turin, Italy, 22 October 2018 (EYRE’18), 4 pages.<br>
+The paper of this porject is in accepted by 1st International Workshop on EntitY REtrieval, Lingotto, Turin, Italy, 22 October 2018 (EYRE’18), 4 pages.<br>
 *notice: This brach contains data we acquired from online **[database](https://wiki.dbpedia.org/)** beforehand, if you want to supplement data online on your own, please checkout our full_edition brach or read the comments in lda_output_and_test file. Due to the mobility of online database, we cannot guarantee the data you acquire is the same as we provide in this branch.*
 ## STRUCTURE AND EXPLANATION
 ### Structure
