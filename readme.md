@@ -87,5 +87,4 @@ The output is in the folder named "MPSUM_output" as your running this project wi
 ### Evaluation
 You can evaluate your own output's F-measure and MAP by following instructions in [ESBM Benchmark](http://ws.nju.edu.cn/summarization/esbm/).
 ## ACKNOWLEDGEMENT
-This is our Summer internship project in IIE, my tutor [Longtao Huang](http://people.ucas.edu.cn/~huanglongtao) and group members has helped me a lot. Without them, I am certainly unable to complete this project.<br>
-Last but not least, a gorgeous girl passing by has given me great courage to go ahead.<br>  
+This is our Summer internship project in IIE, my tutor [Longtao Huang](http://people.ucas.edu.cn/~huanglongtao) and group members has helped me a lot. Without them, I am certainly unable to complete this project.<br> 
