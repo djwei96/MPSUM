@@ -9,7 +9,7 @@ If you have any questions or suggestions, please do not hesitate to contact us.<
 #### Students
 - **Dongjun Wei:** weidongjun123@gmail.com<br>
 - **Shiyuan Gao:** gsyuan12@163.com<br> 
-- **Yaxin Liu:** crayou_liu@163.com<br>
+- **Yaxin Liu:** crayou_liu@1
 - **Zhibing Liu:** liuzhbing1996@163.com<br> 
 ### Background
 This project contains souce code and output for **[Entity Summarization](http://ws.nju.edu.cn/summarization/esbm/)***(top5, top10, all)* in **[dbpedia](https://wiki.dbpedia.org/)** and **[lmdb](http://symas.com/lmdb)**. Compared with the results shown in the **[official website](http://ws.nju.edu.cn/summarization/esbm/)**, We have achieved state-of-the-art results.<br>
@@ -72,8 +72,6 @@ The directory structure of our projects should be as follows.
 
 - Ubuntu 16.04
 - python 3.6 
-- git
-- VSCODE 1.25(optional)
 
 ### Dependency
 Several python modules are required in our project as follows:
