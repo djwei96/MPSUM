@@ -1,5 +1,5 @@
 # MPSUM: Predicate-Based Matching for RDF Triples with Application to LDA<br>
-EYRE18' paper: "MPSUM: Predicate-Based Matching for RDF Triples with Application to LDA"
+EYRE@CIKM 18' paper: "MPSUM: Predicate-Based Matching for RDF Triples with Application to LDA"
 ## CONTRIBUTORS AND BACKGROUND
 ### Contributors
 All of the contributors in this project work in the Institute of Information Enginerring CAS, our name and E-mail address are as follows.<br>
