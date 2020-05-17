@@ -1,49 +1,5 @@
 # MPSUM: Predicate-Based Matching for RDF Triples with Application to LDA<br>
 EYRE@CIKM'18 paper: "MPSUM: Predicate-Based Matching for RDF Triples with Application to LDA"
-## Structure
-The directory structure of our projects should be as follows.
-```
-|-- MPSUM
-	|--core
-		|-- rdf_preprocess_dict.py
-		|-- category_supplement.py
-		|-- ...
-		|-- lda_test_and_output.py
-	|-- dbpedia
-		|-- 1
-			|-- 1_top5.nt
-			|-- 1_top10.nt
-			|-- 1_rank.nt
-		|-- 2
-		|-- ...
-		|-- 100
-  	|-- lmdb
-		|-- 101
-			|-- 101_top5.nt
-			|-- 101_top10.nt
-			|-- 101_rank.nt
-		|-- 102
-		|-- ...
-		|-- 140
-	|-- MPSUM_output
-		|-- dbpedia
-			|-- 1
-				|-- 1_top5.nt
-				|-- 1_top10.nt
-				|-- 1_rank.nt
-			|-- 2
-			|-- ...
-			|-- 100
-  		|-- lmdb
-			|-- 101
-				|-- 101_top5.nt
-				|-- 101_top10.nt
-				|-- 101_rank.nt
-			|-- 102
-			|-- ...
-			|-- 140
-		
-```
 ## ENVIRONMENT AND DEPENDENCY
 ### Environment
 
