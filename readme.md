@@ -1,5 +1,5 @@
 # MPSUM: Predicate-Based Matching for RDF Triples with Application to LDA<br>
-EYRE@CIKM'18 paper: "MPSUM: Predicate-Based Matching for RDF Triples with Application to LDA"
+EYRE@CIKM'18 paper: "[MPSUM: Predicate-Based Matching for RDF Triples with Application to LDA](https://arxiv.org/abs/1905.10625)"
 ## ENVIRONMENT AND DEPENDENCY
 ### Environment
 
